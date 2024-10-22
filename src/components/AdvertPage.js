@@ -13,7 +13,7 @@ const AdvertPage = () => {
       <div className="call-to-action">
         <h2 className="cta-title">Subscribe Now!</h2>
         <p className="cta-text">Experience the best entertainment with our unbeatable packages.</p>
-        <button className="cta-button">Get Started</button>
+        <a href='/subscribe' className="cta-button">Get Started</a>
       </div>
     </div>
 

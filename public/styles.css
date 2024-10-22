@@ -19,8 +19,12 @@
   
   /* Navbar Styles */
   .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     background-color:#F0F0F0;
-    padding: 30px 30px; /* Increased padding */
+    padding: 50px 30px; /* Increased padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,11 +68,12 @@
 .advert-container {
     max-width: 1200px;
     margin: 0 auto;
+    
     padding: 50px;
     text-align: left;
     background-image: url('https://www.dstv.com/media/nghnl4u2/get-dstv_streaming_new.jpg?anchor=center&mode=crop&width=1200&height=630&rnd=133074556565270000'); /* Background image for DSTV */
     background-size: cover;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     transition: transform 0.3s ease; /* Transition effect */
   }
@@ -79,6 +84,7 @@
   
   .advert-title {
     font-size: 2.5rem;
+    margin-top: 120px;
     margin-bottom: 20px;
     color: white;
     animation: fadeIn 1s ease-in; /* Fade-in animation */
@@ -180,6 +186,11 @@
     .cta-button {
       padding: 26px 35px;
       font-size: 28px;
+    }
+    .advert-container a {
+     text-decoration: none;
+     padding: 17px;
+     font-size: 13px;
     }
   }
   
@@ -490,14 +501,14 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     flex-wrap: wrap;
   }
   
   .footer-section {
-    width: 30%;
-    padding: 10px;
+    width: 44%;
+    padding: 15px;
   }
   
   .footer-section h2 {
@@ -535,8 +546,10 @@
   }
   
   @media (max-width: 1050px) {
+    
     .footer p {
-      font-size: 20px;
+      font-size: 25px;
+      
     }
     .footer li {
       font-size: 20px;
@@ -544,8 +557,12 @@
     }
 
     .footer-bottom p{
-      font-size: 12px !important;
+      font-size: 10px !important;
     }
+    .footer-section p{
+      font-size: 29px;
+    }
+   
   }
 
 
