@@ -1,0 +1,570 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #2c3e50;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color:#F0F0F0;
+    padding: 30px 30px; /* Increased padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#333333;
+  }
+  
+  .navbar-logo h1 {
+    margin: 0;
+    font-size: 2rem; /* Increased font size */
+    color: #333333;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased gap */
+  }
+  
+  .navbar-links li {
+    display: inline;
+  }
+  
+  .nav-link {
+    color:#333333;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increased font size */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #FF6B35;
+  }
+  
+  @media (max-width: 1050px) {
+    .nav-link {
+      font-size: 34px;
+    }
+  }
+  
+  /* Advert Page Styles */
+.advert-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: left;
+    background-image: url('https://www.dstv.com/media/nghnl4u2/get-dstv_streaming_new.jpg?anchor=center&mode=crop&width=1200&height=630&rnd=133074556565270000'); /* Background image for DSTV */
+    background-size: cover;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Transition effect */
+  }
+  
+  .advert-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .advert-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    animation: fadeIn 1s ease-in; /* Fade-in animation */
+  }
+  
+  .advert-description {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-in; /* Fade-in animation */
+  }
+  
+  .advert-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease-in; /* Slide-in animation */
+  }
+  
+  .call-to-action {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #E5E7EB;
+    border-radius: 10px;
+    color: #2D2D2D; /* Text color for visibility */
+    animation: fadeIn 1.3s ease-in; /* Fade-in animation */
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #FF6B35; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #2ecc71; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1050px) {
+    .advert-container {
+        background-size: cover;
+    }
+    .advert-title {
+      font-size: 2rem;
+    }
+  
+    .advert-description {
+      font-size: 0.8rem;
+    }
+  
+    .cta-title {
+      font-size: 1.5rem;
+    }
+  
+    .cta-text {
+      font-size: 13px;
+    }
+  
+    .cta-button {
+      padding: 26px 35px;
+      font-size: 28px;
+    }
+  }
+  
+
+  /* Subscription Form Styles */
+  .subscription-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px; /* Increased padding */
+    border-radius: 8px;
+    color: white; /* Text color for visibility */
+    text-align: center; /* Center align the text */
+  }
+  
+  /* Service Tabs Styles */
+  .service-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /* Increased margin */
+  }
+  
+  .service-tab {
+    padding: 15px 25px; /* Increased padding */
+    margin: 0 15px; /* Increased margin */
+    background-color: rgba(189, 195, 199, 0.7); /* Default background for inactive tabs */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 1.2rem; /* Increased font size */
+  }
+  
+  .service-tab:hover {
+    background-color: rgba(36, 43, 44, 0.8);
+  }
+  
+  /* Active Tab Colors */
+  .active-dstv {
+    background-color: rgba(52, 152, 219, 0.7); /* DSTV Strong Blue */
+  }
+  
+  .active-gotv {
+    background-color: rgba(229, 57, 53, 0.7); /* GOTV Red */
+  }
+  
+  .active-startimes {
+    background-color: rgba(243, 156, 18, 0.7); /* Startimes Orange */
+  }
+  
+  /* Form Styles */
+  .form-background {
+    padding: 30px; /* Increased padding */
+    border-radius: 8px;
+    backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+    border: 1px solid #ccc; /* Optional: a subtle border */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Background Colors for Each Service */
+  .form-background.dstv {
+    background-color: white; /* Add your background image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; /* Make sure the image covers the entire element */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add box shadow */
+    border-radius: 10px; /* Optional: Round the corners */
+    padding: 20px; /* Optional: Add some padding for content */
+    margin: 20px; /* Optional: Add margin if needed */
+}
+
+
+  .form-background.gotv {
+    /* background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/473dbc176302319.Y3JvcCw1MzI2LDQxNjYsMCww.png'); Background image for DSTV */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add box shadow */
+  }
+  
+  .form-background.startimes {
+    /* background-image: url('https://dailyhub.com.ng/wp-content/uploads/2024/08/image-34.png'); Background image for DSTV */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    color: black;
+  }
+  
+  form div {
+    margin-bottom: 20px; /* Increased margin */
+  }
+  
+  label {
+    margin-bottom: 10px; /* Increased margin */
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size */
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    border: 1px solid gray;
+    border-radius: 4px;
+    font-size: 1rem; /* Increased font size */
+  }
+  
+  button[type="submit"] {
+    padding: 15px 25px; /* Increased padding */
+    background-color: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Increased font size */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3498db;
+  }
+  
+  /* Success Message Styles */
+  .success-message {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    font-size: 1.2rem; /* Increased font size */
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 1050px) {
+    .subscription-container {
+      padding: 25px; /* Adjusted padding */
+      max-width: 100%; /* Full width for mobile */
+    }
+  
+    .service-tabs {
+      flex-direction: row; /* Stack tabs vertically */
+      
+    }
+  
+    .service-tab {
+      width: 100%; /* Full width for tabs */
+      margin: 10px 0; /* Added vertical margin */
+      font-size: 2rem; /* Increased font size */
+    }
+  
+    .form-background {
+      padding: 20px; /* Adjusted padding */
+    }
+  
+    label {
+      font-size: 2rem; /* Adjusted label font size */
+    }
+  
+    input[type="text"],
+    input[type="tel"],
+    select {
+     
+      padding: 23px; /* Adjusted input padding */
+      font-size: 2rem; /* Adjusted font size */
+    }
+  
+    button[type="submit"] {
+      padding: 20px 20px; /* Adjusted button padding */
+      font-size: 2rem; /* Adjusted font size */
+    }
+  }
+  
+  /* Services page style */
+
+
+  .services-container {
+    background-color: #E5E7EB;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .services-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-text {
+    max-width: 60%;
+    text-align: left;
+  }
+  .service-text a {
+    background-color:  #FF6B35;
+    padding: 14px;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 45px;
+  }
+
+  
+  
+  .service-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .service-image {
+    width: 35%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .services-container p {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #555;
+    
+  }
+  
+
+  @media (max-width: 1050px) {
+     
+    .services-container h2 {
+        font-size: 40px;
+        
+    }
+
+    .services-container h3 {
+        font-size: 40px;
+    }
+    
+    
+     .services-container p{
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    
+
+    .service-text a {
+      background-color:  #FF6B35;
+      padding: 18px;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 45px;
+      font-size: 30px;
+    }
+     
+    .service-p {
+      font-size: 12px !important;
+    }
+  }
+
+
+  /* Footer styles page  */
+
+
+
+  .footer {
+    background-image: url('https://selfservice.dstvafrica.com/media/12185/dstv-ss_notification-banner.jpg'); /* Background image for DSTV */
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    width: 30%;
+    padding: 10px;
+  }
+  
+  .footer-section h2 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.8;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 1050px) {
+    .footer p {
+      font-size: 20px;
+    }
+    .footer li {
+      font-size: 20px;
+      
+    }
+
+    .footer-bottom p{
+      font-size: 12px !important;
+    }
+  }
+
+
+ /* logo slider  */
+
+  .logo-slider-container {
+  margin: 20px auto;
+  max-width: 1200px; /* Adjust as needed */
+}
+
+.logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Optional padding for aesthetics */
+}
+
+.logo-image {
+  max-width: 80%; /* Adjust to make logos smaller */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Add horizontal gap between logos */
+}
