@@ -29,6 +29,8 @@
     justify-content: space-between;
     align-items: center;
     color:#333333;
+   
+    z-index: 222;
   }
   
   .navbar-logo h1 {
@@ -198,7 +200,8 @@
   /* Subscription Form Styles */
   .subscription-container {
     max-width: 600px;
-    margin: 0 auto;
+    
+    margin: 30px auto;
     padding: 30px; /* Increased padding */
     border-radius: 8px;
     color: white; /* Text color for visibility */
@@ -334,6 +337,7 @@
     .subscription-container {
       padding: 25px; /* Adjusted padding */
       max-width: 100%; /* Full width for mobile */
+      padding-top: 180px !important;
     }
   
     .service-tabs {
@@ -366,6 +370,10 @@
     button[type="submit"] {
       padding: 20px 20px; /* Adjusted button padding */
       font-size: 2rem; /* Adjusted font size */
+    }
+    .price-display {
+      font-size: 33px;
+      color: red;
     }
   }
   
@@ -557,7 +565,7 @@
     }
 
     .footer-bottom p{
-      font-size: 13px !important;
+      font-size: 17px !important;
     }
     .footer-section p{
       font-size: 29px;
